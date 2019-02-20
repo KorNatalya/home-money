@@ -29,7 +29,6 @@ export class AddEventComponent implements OnInit, OnDestroy {
 
   constructor(private eventsService: EventsService,
               private billService: BillService) {
-
   }
 
   ngOnInit() {

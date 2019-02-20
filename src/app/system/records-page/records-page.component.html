@@ -4,7 +4,7 @@
   </h3>
 </div>
 <section class="section text-center" *ngIf="!isLoaded">
-    Loading...
+  Loading...
 </section>
 
 <section class="section" *ngIf="isLoaded">
@@ -12,7 +12,9 @@
     <div class="col-md-6">
       <wfm-add-event [categories]="categories"></wfm-add-event>
     </div>
-    <wfm-add-category (onCategoryAdd)="newCategoryAdded($event)"></wfm-add-category>
+    <div class="col-md-6">
+      <wfm-add-category (onCategoryAdd)="newCategoryAdded($event)"></wfm-add-category>
+    </div>
   </div>
   <div class="row">
     <div class="col-md-6">

@@ -1,5 +1,5 @@
 <div class="col col-xs-12 col-sm-12 col-md-6 col-xl-7 history-col">
-  <div class="card">
+  <div class="card" style="height: 291px;">
     <div class="card-block">
       <div class="title-block">
         <h4 class="title">Курс</h4>
@@ -21,7 +21,7 @@
           </tr>
           <tr *ngFor="let c of currencies">
             <td>{{ c }}</td>
-            <td>{{ currency.rates[c] * 1000}}</td>
+            <td>{{ currency.rates[c] * 1000  | number:'1.2'}}</td>
             <td>{{ currency.date | wfmMoment:'YYYY-MM-DD'}}</td>
           </tr>
           </tbody>

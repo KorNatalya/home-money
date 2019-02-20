@@ -7,6 +7,6 @@ import {Component, Input, OnInit} from '@angular/core';
 })
 export class HistoryChartComponent {
 
- @Input() data;
+  @Input() data;
 
 }

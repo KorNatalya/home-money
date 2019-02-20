@@ -5,7 +5,6 @@ import {User} from '../../shared/models/user.model';
 import {Message} from '../../shared/models/message.model';
 import {AuthService} from '../../shared/services/auth.service';
 import {ActivatedRoute, Params, Router} from '@angular/router';
-import {el} from '@angular/platform-browser/testing/src/browser_util';
 
 @Component({
   selector: 'wfm-login',

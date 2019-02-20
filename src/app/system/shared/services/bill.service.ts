@@ -13,10 +13,6 @@ export class BillService extends BaseApi {
     super(http);
   }
 
-  // getBill(): Observable<Bill> {
-  //   return this.http.get<Bill>('http://localhost:3000/bill');
-  // }
-
   getBill(): Observable<Bill> {
     return this.get('bill');
   }
@@ -29,8 +25,3 @@ export class BillService extends BaseApi {
     return this.http.get<ExchangeRatesApi>(`https://api.exchangeratesapi.io/latest?base=${base}&symbols=USD,EUR`);
   }
 }
-
-
-  // https://data.fixer.io/api/latest?access_key=cc5f654ae3d5223af768e7a47030b5b6&base=${base}&symbols=USD,RUB
-// http://data.fixer.io/api/latest?access_key=cc5f654ae3d5223af768e7a47030b5b6&base=${base}&symbols=USD,EUR
-//   http://data.fixer.io/api/latest?access_key=cc5f654ae3d5223af768e7a47030b5b6&base=${base}
