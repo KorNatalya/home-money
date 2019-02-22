@@ -1,7 +1,7 @@
 import {Component, OnDestroy, OnInit} from '@angular/core';
 import {CategoriesService} from '../shared/services/categories.service';
 import {EventsService} from '../shared/services/events.service';
-import {combineLatest, Observable, Subscription} from 'rxjs';
+import {combineLatest, Subscription} from 'rxjs';
 import {WFMEvent} from '../shared/models/event.model';
 import {Category} from '../shared/models/category.model';
 
@@ -22,6 +22,8 @@ export class HistoryPageComponent implements OnInit, OnDestroy {
   events: WFMEvent[] = [];
 
   chartData = [];
+
+  isFilterVisible = false;
 
   ngOnInit() {
     this.s1 = combineLatest(
@@ -51,6 +53,23 @@ export class HistoryPageComponent implements OnInit, OnDestroy {
       });
     });
   }
+
+  private toggleFilterVisibility(dir: boolean) {
+    this.isFilterVisible = dir;
+  }
+
+  openFilter() {
+    this.toggleFilterVisibility(true);
+  }
+
+  filterCancel() {
+    this.toggleFilterVisibility(false);
+  }
+
+  filterApply(filterData) {
+    console.log(filterData);
+  }
+
 
   ngOnDestroy() {
     if (this.s1) {
