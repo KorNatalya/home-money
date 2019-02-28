@@ -8,7 +8,7 @@
     }
   ],
   "bill": {
-    "value": 99850,
+    "value": 99550,
     "currency": "RUB"
   },
   "categories": [
@@ -76,6 +76,14 @@
       "date": "27.02.2019 18:25:26",
       "description": "Бытовая химия",
       "id": 6
+    },
+    {
+      "type": "outcome",
+      "amount": 300,
+      "category": 2,
+      "date": "28.02.2019 14:30:38",
+      "description": "Масло",
+      "id": 7
     }
   ]
 }
