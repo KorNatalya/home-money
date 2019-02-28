@@ -59,11 +59,12 @@ export class HistoryFilterComponent implements OnInit {
   }
 
   applyFilter() {
-    this.filterApply.emit({
+    const value = {
       types: this.selectedTypes,
       categories: this.selectedCategories,
       period: this.selectedPeriod
-    });
+    };
+    this.filterApply.emit(value);
   }
 
 }
