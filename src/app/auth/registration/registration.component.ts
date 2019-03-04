@@ -1,8 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {FormControl, FormGroup, Validators} from '@angular/forms';
 import {UsersService} from '../../shared/services/users.service';
 import {User} from '../../shared/models/user.model';
 import {Router} from '@angular/router';
+import {Meta, Title} from '@angular/platform-browser';
 
 @Component({
   selector: 'wfm-registration',
@@ -15,8 +16,9 @@ export class RegistrationComponent implements OnInit {
 
   constructor(
     private usersService: UsersService,
-    private router: Router) {
-
+    private router: Router,
+    private title: Title) {
+    title.setTitle('Регистрация');
   }
 
   ngOnInit() {
@@ -27,6 +29,7 @@ export class RegistrationComponent implements OnInit {
       'agree': new FormControl(false, [Validators.requiredTrue]),
     });
   }
+
   onSubmit() {
     const {email, password, name} = this.form.value;
     const user = new User(email, password, name);
@@ -38,7 +41,7 @@ export class RegistrationComponent implements OnInit {
             nowCanLogin: true
           }
         });
-    });
+      });
   }
 
   forbiddenEmails(control: FormControl): Promise<any> {
