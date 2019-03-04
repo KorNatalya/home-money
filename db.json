@@ -8,24 +8,24 @@
     }
   ],
   "bill": {
-    "value": 99550,
+    "value": 93000,
     "currency": "RUB"
   },
   "categories": [
     {
       "name": "Дом",
-      "capacity": 30000,
+      "capacity": 40000,
       "id": 1
     },
     {
       "name": "Еда",
-      "capacity": 25000,
+      "capacity": 35000,
       "id": 2
     },
     {
       "id": 3,
       "name": "Машина",
-      "capacity": 4000
+      "capacity": 9000
     }
   ],
   "events": [
@@ -84,6 +84,14 @@
       "date": "28.02.2019 14:30:38",
       "description": "Масло",
       "id": 7
+    },
+    {
+      "type": "outcome",
+      "amount": 7000,
+      "category": 2,
+      "date": "04.03.2019 15:15:04",
+      "description": "продукты",
+      "id": 8
     }
   ]
 }
